@@ -3,7 +3,7 @@
 # Shuffles a directory by renaming all of the files starting with a random number
 dir_to_shuffle=$1
 
-# check if the user gave two directories
+# check if the user gave a directories
 if [ -n "$dir_to_shuffle" ]; then
     full_path="$(readlink -e $dir_to_shuffle)"
 else
@@ -12,7 +12,7 @@ else
     exit
 fi
 
-# Confirm to copy
+# Confirm to shuffle
 echo "Do you want to shuffle the contents of $full_path ?"
 echo "Warning: Doing this will rename the beginning of all your files it is recommended to create a backup first"
 echo "To shuffle this directory type 's', to create a backup and then shuffle type 'b', to close type 'e'" 
